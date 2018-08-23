@@ -68,7 +68,7 @@ function play(connection, message) {
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame("d*help");
+    client.user.setGame("d*help | version bêta""DalBot By Tutal");
     
 
 });
