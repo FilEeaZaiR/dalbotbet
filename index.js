@@ -295,7 +295,7 @@ if(message.content === prefix + "infoserveur"){
   if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection) {
 
   play(connection, message) 
-  return message.channel.send("Le titre à été ajouté à la file d'attente");
+  
 
   });
 
@@ -324,7 +324,7 @@ if(message.content === prefix + "infoserveur"){
     return message.channel.send(":x: `Tu dois être dans un salon vocal`");
 
     message.member.voiceChannel.leave();
-    return message.channel.send("Fin de la playlist");
+    
 
     break;
   
