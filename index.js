@@ -46,7 +46,7 @@ client.on('guildMemberAdd', member => {
 
 
 
-client.login(process.env.TOKEN);
+client.login("NDgyMDg4MDQ4MDc5OTI5MzQ0.Dl_zuQ.I6fEJPOlJscW88GIzOeeLBKtoY8");
 
 
 function play(connection, message) {
@@ -68,7 +68,7 @@ function play(connection, message) {
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame("d*help | version bêta");
+    client.user.setGame("d*help");
     
 
 });
@@ -295,6 +295,7 @@ if(message.content === prefix + "infoserveur"){
   if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection) {
 
   play(connection, message) 
+  return message.channel.send("Le titre à été ajouté à la file d'attente");
 
   });
 
@@ -323,6 +324,7 @@ if(message.content === prefix + "infoserveur"){
     return message.channel.send(":x: `Tu dois être dans un salon vocal`");
 
     message.member.voiceChannel.leave();
+    return message.channel.send("Fin de la playlist");
 
     break;
   
