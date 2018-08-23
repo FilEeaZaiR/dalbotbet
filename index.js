@@ -11,23 +11,7 @@ const queue = new Map();
 var servers = {};
 
 
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === 'bienvenue');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Bienvenue sur le serveur, ${member}`);
-});
 
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.id === '481147863707942948');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Bienvenue sur les terres de olydrie espérons que tu t'amusera ici, ${member}`);
-});
 
 
 
@@ -37,7 +21,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Bienvenue sur mon support officiel, ${member}`);
+  channel.send(`Bienvenue sur mon support officiel, je suis le bot "Bêta" donc c'est moi qui aura les nouvelles fonctionnalités en premier ${member}`);
 });
 
 //addrôle = ajout de rôles
