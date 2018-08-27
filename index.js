@@ -30,7 +30,7 @@ client.on('guildMemberAdd', member => {
 
 
 
-client.login("NDgyMDg4MDQ4MDc5OTI5MzQ0.Dl_zuQ.I6fEJPOlJscW88GIzOeeLBKtoY8");
+client.login(process.env.TOKEN);
 
 
 function play(connection, message) {
