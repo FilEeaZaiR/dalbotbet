@@ -22,7 +22,7 @@ client.login(process.env.TOKEN);
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame("d*help | bot NON stable ");
+    client.user.setGame("d*help | bot stable ");
     
 
 });
@@ -61,7 +61,7 @@ if(message.content === "serveurinfo"){
     if(message.content === prefix + "help") {
       var aide_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
-      .setTitle(`:robot: Voici mes catégories d'aide ! :dalbot: `)
+      .setTitle(`:robot: Voici mes catégories d'aide !`)
       .setDescription(`Voici mes commandes disponible :`)
       .setThumbnail(message.author.avatarURL)
       .addField(":tools: Modération", "Fais `d*mod` pour voir mes commandes de modération !")
