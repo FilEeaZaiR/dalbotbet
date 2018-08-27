@@ -117,7 +117,7 @@ if(message.content === "serveurinfo"){
 
     if(message.content === prefix + "music") {
       var fun_embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
+      .setColor('#FF4000', '#00FFFF', '#FF0040')
       .setTitle(`:tools: Voici ma commandes musicales !`)
       .setThumbnail(message.author.avatarURL)
       .addField(":arrow_forward: d*play [nom ou lien]", "Lire de la musique")
