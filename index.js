@@ -4,8 +4,6 @@ const client = new Discord.Client();
 
 var prefix = "d*";
 
-const ytdl = require('ytdl-core');
-
 const queue = new Map();
 
 var servers = {};
@@ -19,26 +17,12 @@ var servers = {};
 client.login(process.env.TOKEN);
 
 
-function play(connection, message) {
-  
-  var server = servers[message.guild.id];
 
-  server.dispatcher = connection.playStream(ytdl(server.queue[0], {filter: "audioonly"}));
-
-  server.queue.shift();
-
-  server.dispatcher.on("end", function() { 
-    if (server.queue[0]) play(connection, message);
-
-    else connection.disconnect();
-
-  });
-}
 
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame("d*help | version bêta");
+    client.user.setGame("d*help | bot NON stable ");
     
 
 });
@@ -68,12 +52,7 @@ if(message.content === prefix + "infoserveur"){
   
 
 
-bot.on('message', message => {
 
-if (message.content === 'ping') {
-message.reply('Le **BOT** a mis: ' + `[ **${msg.createdTimestamp - message.createdTimestamp}**`+ ' **Ms** ] pour repondre.\nEt l\'**API** a mis: ' + `[ **${Math.round(client.ping)}**`+ ' **Ms** ] pour repondre')
-}
-});
 
 
     
@@ -81,13 +60,13 @@ message.reply('Le **BOT** a mis: ' + `[ **${msg.createdTimestamp - message.creat
     if(message.content === prefix + "help") {
       var aide_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
-      .setTitle(`:robot: Voici mes catégories d'aide !`)
+      .setTitle(`:robot: Voici mes catégories d'aide ! :dalbot: `)
       .setDescription(`Voici mes commandes disponible :`)
       .setThumbnail(message.author.avatarURL)
       .addField(":tools: Modération", "Fais `d*mod` pour voir mes commandes de modération !")
       .addField(":tada: Fun", "Fais `d*fun` pour voir mes commandes d'animation !")
       .addField(":musical_note: Musique", "Fais `d*music` pour voir mes commandes musicales !")
-      .setFooter("Menu d'aide - DalBot ")
+      .setFooter(`Menu d'aide - DalBot - demandé par ${user}`)
       .setTimestamp()
    
       message.channel.send(aide_embed);
@@ -101,7 +80,7 @@ message.reply('Le **BOT** a mis: ' + `[ **${msg.createdTimestamp - message.creat
       .setTitle(`Invite-moi sur ton serveur`)
       .setDescription(`Lien d'invitation`)
       .addField("Pour me metre sur votre serveur : " , "c'est simple")
-      .addField(" :x: Ce bot ne peux pas être mis sur votre serveur, demander à @TŨţĂℓ ®#8653 Merci !", " le seul lien ")
+      .addField(" :x: Ce bot ne peux pas être mis sur votre serveur, demander à @TŨţĂℓ ®#8653 Merci !", " Bot privé :x:")
       .setFooter("Page d'invitation - DalBot by TŨţĂℓ")
       .setTimestamp()
       message.channel.send(aide_embed);
