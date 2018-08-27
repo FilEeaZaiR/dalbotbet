@@ -120,8 +120,9 @@ if(message.content === "serveurinfo"){
       .setColor('RANDOM')
       .setTitle(`:tools: Voici ma commandes musicales !`)
       .setThumbnail(message.author.avatarURL)
-      .addField(":arrow_forward:  d*play [nom ou lien]", "Lire de la musique")
+      .addField(":arrow_forward: d*play [nom ou lien]", "Lire de la musique")
       .addField(":fast_forward: d*skip", "Passez à la musique suivante")
+      .addField(":stop_button: *stop", "Arrêter la musique")
       .setFooter("Commande musique - DalBot")
       .setTimestamp()
       message.channel.send(fun_embed);
