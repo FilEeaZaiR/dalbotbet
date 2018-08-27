@@ -37,7 +37,7 @@ client.on('message', async message => {
 
     
 ;
-if(message.content === prefix + "infoserveur"){
+if(message.content === "@DalBot Beta#0482"){
   var embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setDescription("Information du Discord")
