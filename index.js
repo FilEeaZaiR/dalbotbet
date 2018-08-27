@@ -67,7 +67,7 @@ if(message.content === "serveurinfo"){
       .addField(":tools: Modération", "Fais `d*mod` pour voir mes commandes de modération !")
       .addField(":tada: Fun", "Fais `d*fun` pour voir mes commandes d'animation !")
       .addField(":musical_note: Musique", "Fais `d*music` pour voir mes commandes musicales !")
-      .setFooter(`Menu d'aide - DalBot - demandé par ${user}`)
+      .setFooter(`Menu d'aide - DalBot `)
       .setTimestamp()
    
       message.channel.send(aide_embed);
@@ -120,8 +120,8 @@ if(message.content === "serveurinfo"){
       .setColor('RANDOM')
       .setTitle(`:tools: Voici ma commandes musicales !`)
       .setThumbnail(message.author.avatarURL)
-      .addField(":headphones: d*play [nom ou lien]", "Lire de la musique")
-      .addField(":arrow_right: d*skip", "Passez à la musique suivante")
+      .addField(":arrow_forward:  d*play [nom ou lien]", "Lire de la musique")
+      .addField(":fast_forward: d*skip", "Passez à la musique suivante")
       .setFooter("Commande musique - DalBot")
       .setTimestamp()
       message.channel.send(fun_embed);
