@@ -14,16 +14,6 @@ var servers = {};
 
 
 
-
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.id === '480394690563145729');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Bienvenue sur mon support officiel, je suis le bot "Bêta" donc c'est moi qui aura les nouvelles fonctionnalités en premier ${member}`);
-});
-
 //addrôle = ajout de rôles
 
 
@@ -52,13 +42,13 @@ function play(connection, message) {
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame("d*help | version bêta");
+    client.user.setGame(`d*help | version bêta, ${bot.ping} `);
     
 
 });
 
 client.on('message', async message => { 
-    if(message.content === "Bonjour"){
+    if(message.content === "Bonjour DalBot beta"){
         message.reply("Salut ");
         console.log('Le bot dit bonjour');
     }
@@ -83,11 +73,6 @@ if(message.content === prefix + "infoserveur"){
 
 
 
-    client.on('message', msg => {
-      if (msg.content === 'annonce1') {
-        msg.reply(' :x: Recrutement off :x:');
-      }
-    });
     
 
 
@@ -116,7 +101,7 @@ if(message.content === prefix + "infoserveur"){
       .setTitle(`Invite-moi sur ton serveur`)
       .setDescription(`Lien d'invitation`)
       .addField("Pour me metre sur votre serveur : " , "c'est simple")
-      .addField(" https://discordapp.com/oauth2/authorize?client_id=477024062602739712&scope=bot&permissions=2146958847", " le seul lien ")
+      .addField(" :x: Ce bot ne peux pas être mis sur votre serveur, demander à @TŨţĂℓ ®#8653 Merci !", " le seul lien ")
       .setFooter("Page d'invitation - DalBot by TŨţĂℓ")
       .setTimestamp()
       message.channel.send(aide_embed);
