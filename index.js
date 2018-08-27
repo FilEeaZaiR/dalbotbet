@@ -68,16 +68,11 @@ if(message.content === prefix + "infoserveur"){
   
 
 
-if(message.content === prefix + "ping"){
-  var embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .setDescriptionTitle("Ping")
-  .setDescription("    ")
-  .addField("Ping :", "Non disponible :warning:")
-  
-
-  mesage.channel.sendEmbed(embed)
-  }
+bot.on('message', message => {
+if (message.content === '*ping') {
+message.reply('Le **BOT** a mis: ' + `[ **${msg.createdTimestamp - message.createdTimestamp}**`+ ' **Ms** ] pour repondre.\nEt l\'**API** a mis: ' + `[ **${Math.round(client.ping)}**`+ ' **Ms** ] pour repondre')
+}
+})
     
 
 
