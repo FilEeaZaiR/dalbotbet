@@ -72,7 +72,8 @@ if(message.content === prefix + "ping"){
   var embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setDescriptionTitle("Ping")
-  .setDescription("Ping non disponible pour le moment :warning: ")
+  .setDescription("    ")
+  .addField("Ping :", "Non disponible :warning:")
   
 
   mesage.channel.sendEmbed(embed)
