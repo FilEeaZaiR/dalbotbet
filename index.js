@@ -27,6 +27,10 @@ const embed = new RichEmbed()
       .setColor(RANDOM)
       // Set the main content of the embed
       .setDescription('Ceci est une description');
+      
+        mesage.channel.sendEmbed(embed)
+  }
+
 
 
 //fin de l'embed test
