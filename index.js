@@ -17,23 +17,16 @@ var servers = {};
 //test embed simple 
 //debut
 
-client.on('message', message => {
-  // If the message is "how to embed"
-  if (message.content === 'embed') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
-    const embed = new RichEmbed()
+
+
+if(message.content === prefix + "embed"){
+const embed = new RichEmbed()
       // Set the title of the field
       .setTitle("Ceci est le titre")
       // Set the color of the embed
       .setColor(RANDOM)
       // Set the main content of the embed
       .setDescription('Ceci est une description');
-    // Send the embed to the same channel as the message
-    message.channel.send(embed);
-  }
-});
 
 
 //fin de l'embed test
