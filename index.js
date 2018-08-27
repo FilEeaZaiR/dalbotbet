@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 
-const { Client, RichEmbed } = require('discord.js');
-
 const client = new Discord.Client();
 
 var prefix = "d*";
@@ -14,26 +12,6 @@ var servers = {};
 
 
 
-//test embed simple 
-//debut
-
-
-
-if(message.content === prefix + "embed"){
-const embed = new RichEmbed()
-      // Set the title of the field
-      .setTitle("Ceci est le titre")
-      // Set the color of the embed
-      .setColor(RANDOM)
-      // Set the main content of the embed
-      .setDescription('Ceci est une description');
-      
-        mesage.channel.sendEmbed(embed)
-  }
-
-
-
-//fin de l'embed test
 
 
 
@@ -90,7 +68,15 @@ if(message.content === prefix + "infoserveur"){
   
 
 
+if(message.content === prefix + "infoserveur"){
+  var embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setDescriptionTitle("Ping")
+  .setDescription("Ping non disponible pour le moment :warning: ")
+  
 
+  mesage.channel.sendEmbed(embed)
+  }
     
 
 
