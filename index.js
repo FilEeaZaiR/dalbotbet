@@ -68,7 +68,7 @@ if(message.content === prefix + "infoserveur"){
   
 
 
-if(message.content === prefix + "infoserveur"){
+if(message.content === prefix + "ping"){
   var embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setDescriptionTitle("Ping")
