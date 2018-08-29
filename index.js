@@ -22,7 +22,7 @@ client.login(process.env.TOKEN);
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame("d*help | bot stable ");
+    client.user.setGame("d*help | j'en ai plein le cul ^^");
     
 
 });
